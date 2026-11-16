@@ -2,6 +2,25 @@
 #include <string.h>
 #include "zoo.h"
 
+void afficherMenu()
+{
+    printf("\n===== ZOO VIRTUEL =====\n");
+    printf("1. Ajouter un animal\n");
+    printf("2. Afficher tout les animaux\n");
+    printf("3. Nourrir un animal\n");
+    printf("4. Faire viellir les animaux\n");
+    printf("5. Verifier la sante d'un animal\n");
+    printf("6. Afficher les statiqtiques du zoo\n");
+    printf("0. Quitter\n");
+}
+
+int lireChoix()
+{
+    int choix;
+    scanf("%d",&choix);
+    return choix;
+}
+
 Animal saisir(){
     Animal a ;
     printf("Indiquez son nom :");

@@ -12,5 +12,7 @@ typedef struct Animal{
 int nourrir(Animal a);
 Animal saisir();
 
+int lireChoix();
+void afficherMenu();
 
 #endif

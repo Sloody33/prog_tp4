@@ -9,6 +9,8 @@ typedef struct Animal{
     int faim;
 }Animal ;
 
+int nourrir(Animal a);
+Animal saisir();
 
 
 #endif

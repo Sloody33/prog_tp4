@@ -80,3 +80,31 @@ int nourrir(Animal a){
         return 0;
     }
 }
+
+Animal temps(Animal a[20]){
+    for (int i = 0; i < 20; i++)
+    {
+        a[i].age++;
+        if (a[i].faim<80)
+        {
+            a[i].faim = a[i].faim +20;
+        } else {a[i].faim=100;}
+        if (a[i].faim >= 67){
+            strcpy(a[i].sante, "mauvais");
+        } else if (a[i].faim >= 33)
+        {
+            strcpy(a[i].sante, "moyen");
+        } else {strcpy(a[i].sante,"bon");}
+        if (a[i].faim == 100)
+        {
+            for (int j = i; j < 20-i; j++)
+            {
+                if (i!=19 && a[i].faim == 100)
+                {
+                    a[i]=a[i+1];
+                    a[i+1].faim=100;
+                }
+            }
+        }
+    }
+}

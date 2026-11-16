@@ -5,6 +5,9 @@
 int choix = -1;
 
 int main(){
+    Animal tab[20];
+    int cpt = 0;
+
      while (choix != 0)
     {
         afficherMenu();
@@ -15,6 +18,8 @@ int main(){
         switch (choix)
         {
             case 1:
+                tab[cpt] = saisir();
+                cpt++;
                 break;
 
             case 2:
@@ -24,6 +29,7 @@ int main(){
                 break;
 
             case 4:
+                temps(tab);
                 break;
 
             case 5:
